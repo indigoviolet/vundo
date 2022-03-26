@@ -476,9 +476,10 @@ WINDOW is the window that was/is displaying the vundo buffer."
 
 (define-derived-mode vundo--mode special-mode
   "Vundo" "Mode for displaying the undo tree."
-  (setq mode-line-format nil
-        truncate-lines t
-        cursor-type nil)
+  (setq
+   ;; mode-line-format nil
+   truncate-lines t
+   cursor-type nil)
   (jit-lock-mode -1)
   (face-remap-add-relative 'default 'vundo-default))
 
